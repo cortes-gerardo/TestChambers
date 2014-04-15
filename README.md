@@ -6,7 +6,7 @@ Every chamber is thinking for show a moderate complex example for every day prob
 too simple and don't have considerations like Error Handling, Dependency Injection or N-tier Architecture** that
 has to be the norm.
 
-Plus, the utility classes are general solutions for any software, like the `Id.java` ([link](../src/main/java/util/Id.class)) that you can use, copy, modify
+Plus, the utility classes are general solutions for any software, like the `Id.java` ([link](./src/main/java/util/id/Id.java)) that you can use, copy, modify
 for your project.
 
 

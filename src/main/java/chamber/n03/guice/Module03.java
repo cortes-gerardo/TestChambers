@@ -27,6 +27,7 @@ import chamber.n03.labrat.LabRat;
 import chamber.n03.labrat.LabRatFactory;
 import com.google.inject.AbstractModule;
 import com.google.inject.assistedinject.FactoryModuleBuilder;
+import util.id.guice.IdModule;
 
 /**
  * Created by gcortes on 3/6/14.
@@ -35,5 +36,6 @@ public class Module03 extends AbstractModule {
     @Override
     protected void configure() {
         install(new FactoryModuleBuilder().implement(LabRat.class, LabRat.class).build(LabRatFactory.class));
+        install(new IdModule());
     }
 }

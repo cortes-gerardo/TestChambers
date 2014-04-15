@@ -25,16 +25,24 @@ package chamber.n03.labrat;
 
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
+import util.id.Id;
+import util.id.annotation.AutoIncrement;
 
 /**
  * Created by gcortes on 3/6/14.
  */
 public class LabRat {
+    private final Id<Integer> id;
     private final String name;
 
     @Inject
-    public LabRat(final @Assisted String name) {
+    public LabRat(final @AutoIncrement Id<Integer> id, final @Assisted String name) {
+        this.id = id;
         this.name = name;
+    }
+
+    public Id<Integer> getId() {
+        return id;
     }
 
     public String getName() {
