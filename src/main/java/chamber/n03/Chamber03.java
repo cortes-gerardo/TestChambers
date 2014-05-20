@@ -32,25 +32,30 @@ import common.io.console.Terminal;
 
 /**
  * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
- * Created by gcortes on 3/6/14.
+ * @version 1.0
+ * @since 3/6/14.
  */
-public class Chamber03 implements Program {
-    private final Terminal terminal;
-    private final LabRatFactory factory;
+public class Chamber03 implements Program
+{
+	private final Terminal terminal;
+	private final LabRatFactory factory;
 
-    @Inject
-    public Chamber03(final Terminal terminal, final LabRatFactory factory) {
-        this.terminal = terminal;
-        this.factory = factory;
-    }
+	@Inject
+	public Chamber03(final Terminal terminal, final LabRatFactory factory)
+	{
+		this.terminal = terminal;
+		this.factory = factory;
+	}
 
-    public static void main(final String[] args) {
-        Program program = ProgramFactory.create(Chamber03.class, new Module03());
-        program.execute();
-    }
+	public static void main(final String[] args)
+	{
+		Program program = ProgramFactory.create(Chamber03.class, new Module03());
+		program.execute();
+	}
 
-    @Override
-    public void execute() {
+	@Override
+	public void execute()
+	{
 
-    }
+	}
 }

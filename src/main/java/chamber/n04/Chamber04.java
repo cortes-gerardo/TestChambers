@@ -23,11 +23,21 @@
 
 package chamber.n04;
 
+import common.Program;
+
 /**
  * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
  * @version 1.0
  * @since 3/26/14.
  */
-public class Chamber04
+public class Chamber04 implements Program
 {
+    public static void main(final String[] args) {
+
+    }
+
+    @Override
+    public void execute() {
+
+    }
 }

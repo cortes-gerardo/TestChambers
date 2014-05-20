@@ -31,25 +31,31 @@ import common.ProgramFactory;
 import common.io.console.Terminal;
 
 /**
- * Created by Gerardo on 2/3/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 2/3/14.
  */
-public class Chamber02 implements Program {
+public class Chamber02 implements Program
+{
 	private final Factorial factorial;
 	private final Terminal terminal;
 
 	@Inject
-	public Chamber02(final Factorial factorial, final Terminal terminal) {
+	public Chamber02(final Factorial factorial, final Terminal terminal)
+	{
 		this.factorial = factorial;
 		this.terminal = terminal;
 	}
 
-	public static void main(final String[] args) {
+	public static void main(final String[] args)
+	{
 		final Program program = ProgramFactory.create(Chamber02.class, new Module02());
 		program.execute();
 	}
 
 	@Override
-	public void execute() {
+	public void execute()
+	{
 		final String line = terminal.readLine("write a number: ");
 		final long input = Long.parseLong(line);
 		terminal.printf("The factorial of %d is %d", input, factorial.apply(input));

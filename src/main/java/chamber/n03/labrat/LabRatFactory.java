@@ -24,8 +24,11 @@
 package chamber.n03.labrat;
 
 /**
- * Created by gcortes on 3/6/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 3/6/14.
  */
-public interface LabRatFactory {
-    LabRat create(final String name);
+public interface LabRatFactory
+{
+	LabRat create(final String name);
 }

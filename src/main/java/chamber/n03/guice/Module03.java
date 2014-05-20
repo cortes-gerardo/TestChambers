@@ -30,7 +30,9 @@ import com.google.inject.assistedinject.FactoryModuleBuilder;
 import util.id.guice.IdModule;
 
 /**
- * Created by gcortes on 3/6/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 3/6/14.
  */
 public class Module03 extends AbstractModule {
     @Override

@@ -23,29 +23,42 @@
 
 package chamber.n03.labrat;
 
+import com.google.common.base.Objects;
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
 import util.id.Id;
 import util.id.annotation.AutoIncrement;
 
 /**
- * Created by gcortes on 3/6/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 3/6/14.
  */
-public class LabRat {
-    private final Id<Integer> id;
-    private final String name;
+public class LabRat
+{
+	private final Id<Integer> id;
+	private final String name;
 
-    @Inject
-    public LabRat(final @AutoIncrement Id<Integer> id, final @Assisted String name) {
-        this.id = id;
-        this.name = name;
-    }
+	@Inject
+	public LabRat(final @AutoIncrement Id<Integer> id, final @Assisted String name)
+	{
+		this.id = id;
+		this.name = name;
+	}
 
-    public Id<Integer> getId() {
-        return id;
-    }
+	public Id<Integer> getId()
+	{
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName()
+	{
+		return name;
+	}
+
+	@Override
+	public String toString()
+	{
+		return Objects.toStringHelper(this).add("id", id).add("name", name).toString();
+	}
 }

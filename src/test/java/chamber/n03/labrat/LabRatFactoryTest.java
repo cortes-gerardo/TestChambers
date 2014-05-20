@@ -34,28 +34,36 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.assertNotNull;
 
 /**
- * Created by gcortes on 3/6/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 3/6/14.
  */
 @RunWith(JukitoRunner.class)
-public class LabRatFactoryTest {
-    private LabRatFactory factory;
+public class LabRatFactoryTest
+{
+	private LabRatFactory factory;
 
-    @Before
-    @Inject
-    public void setUp(final LabRatFactory factory) throws Exception {
-        this.factory = factory;
-    }
+	@Before
+	@Inject
+	public void setUp(final LabRatFactory factory) throws Exception
+	{
+		this.factory = factory;
+	}
 
-    @Test
-    public void create() {
-        final LabRat rat = factory.create("Chester");
-        assertNotNull(rat);
-    }
+	@Test
+	public void create()
+	{
+		final LabRat rat = factory.create("Chester");
+		System.out.println(rat.toString());
+		assertNotNull(rat);
+	}
 
-    public static class Module extends JukitoModule{
-        @Override
-        protected void configureTest() {
-            install(new Module03());
-        }
-    }
+	public static class Module extends JukitoModule
+	{
+		@Override
+		protected void configureTest()
+		{
+			install(new Module03());
+		}
+	}
 }

@@ -31,27 +31,33 @@ import common.ProgramFactory;
 import common.io.console.Terminal;
 
 /**
- * Created by Gerardo on 2/8/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 2/8/14.
  */
-public class Chamber01 implements Program {
+public class Chamber01 implements Program
+{
 	private final Terminal terminal;
 	private final Prime prime;
 
 	@Inject
-	public Chamber01(final Terminal terminal, final Prime prime) {
+	public Chamber01(final Terminal terminal, final Prime prime)
+	{
 		this.terminal = terminal;
 		this.prime = prime;
 	}
 
-	public static void main(final String[] args) {
+	public static void main(final String[] args)
+	{
 		Program program = ProgramFactory.create(Chamber01.class, new Module01());
 		program.execute();
 	}
 
 	@Override
-	public void execute() {
+	public void execute()
+	{
 		final String line = terminal.readLine("write a number: ");
 		final boolean isPrime = prime.apply(Long.parseLong(line));
-		terminal.printf("%s prime", isPrime? "is" : "isn't");
+		terminal.printf("%s prime", isPrime ? "is" : "isn't");
 	}
 }
