@@ -1,8 +1,9 @@
 package chamber.n05.configuration;
 
+import com.google.common.cache.LoadingCache;
 import com.google.inject.Inject;
 
-import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 /**
  * @autor Gerardo Cortés <gerardo.cortes.o@gmail.com>
@@ -11,23 +12,18 @@ import java.util.Map;
  */
 public class ConfigurationMultitonImpl implements ConfigurationMultiton
 {
-	private final Map<Class<? extends Configuration>, Object> map;
+	private final LoadingCache <Class<? extends Configuration>, Object> cache;
 
 	@Inject
-	public ConfigurationMultitonImpl(final Map<Class<? extends Configuration>, Object> map)
+	public ConfigurationMultitonImpl(final LoadingCache<Class<? extends Configuration>, Object> cache)
 	{
-		this.map = map;
+		this.cache = cache;
 	}
 
 	@Override
-	public <K extends Configuration> K get(final Class<K> key)
+	public <K extends Configuration> K get(final Class<K> type) throws ExecutionException
 	{
-		if (!map.containsKey(key))
-		{
-			map.put(key, create(key));
-		}
-
-		return key.cast(map.get(key));
+		return type.cast(cache.get(type));
 	}
 
 	private <K extends Configuration> K  create(final Class<K> key)
