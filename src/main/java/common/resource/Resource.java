@@ -3,9 +3,9 @@ package common.resource;
 import java.io.File;
 
 /**
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
  * @version 1.0
- * @autor gcortes <mail>
- * @since 5/21/2014.
+ * @since 21/05/2014.
  */
 public class Resource
 {

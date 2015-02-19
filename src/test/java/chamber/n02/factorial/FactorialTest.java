@@ -32,7 +32,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * Created by Gerardo on 2/28/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 2/28/14.
  */
 @RunWith(JukitoRunner.class)
 public class FactorialTest {

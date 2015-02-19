@@ -24,7 +24,9 @@
 package chamber.n00.helloworld;
 
 /**
- * Created by Gerardo on 2/3/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 2/3/14.
  */
 public class HelloWorld implements Command {
 	@Override

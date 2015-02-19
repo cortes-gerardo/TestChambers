@@ -30,7 +30,9 @@ import common.io.console.StreamDevice;
 import common.io.console.Terminal;
 
 /**
- * Created by Gerardo on 2/24/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 2/24/14.
  */
 public class TerminalModule extends AbstractModule {
 	@Override

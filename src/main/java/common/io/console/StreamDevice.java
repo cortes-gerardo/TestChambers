@@ -26,7 +26,9 @@ package common.io.console;
 import java.io.*;
 
 /**
- * Created by Gerardo on 2/24/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 2/24/14.
  */
 public class StreamDevice implements Terminal {
 	private final BufferedReader reader;

@@ -27,7 +27,12 @@ import java.io.PrintWriter;
 import java.io.Reader;
 
 /**
- * Created by Gerardo on 2/10/14.
+ * Facade of java.io.Console for manage the case when the console device isn't available.
+ * For more info read {@link http://docs.oracle.com/javase/6/docs/api/java/io/Console.html}
+ *
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 2/10/14.
  */
 public interface Terminal {
 	Terminal printf(final String fmt, final Object... params) throws TerminalException;

@@ -2,6 +2,10 @@ Chamber 00: Hello World
 =======================
 Like any Hello World, it's main propose is show the basic structure and some utilities.
 
+Dependency Injection
+--------------------
+
+
 Structure
 ---------
 Each chamber contains the main class with the main method, Guice package with its own module and the package that corresponds to the business logic of the problem with their test.

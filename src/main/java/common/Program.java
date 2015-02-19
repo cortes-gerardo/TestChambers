@@ -24,9 +24,9 @@
 package common;
 
 /**
- * Interface for use of the {@Code ProgramFactory} utility.
- * Created by Gerardo on 11/29/13.
- * @author gerardo.cortes.o@gmail.com
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 29/11/2013.
  */
 public interface Program {
     public void execute();

@@ -28,7 +28,9 @@ import com.google.inject.Injector;
 import com.google.inject.Module;
 
 /**
- * Created by Gerardo on 12/7/13.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 12/7/13.
  */
 public class ProgramFactory {
 

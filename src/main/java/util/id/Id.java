@@ -57,6 +57,7 @@ public class Id<T extends Comparable<T>> implements Comparable<Id<T>>
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public boolean equals(final Object obj)
     {
         return (this == obj) || (obj instanceof Id) && equals((Id<T>) obj);

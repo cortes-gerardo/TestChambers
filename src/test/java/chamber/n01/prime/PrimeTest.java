@@ -36,7 +36,9 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Created by Gerardo on 2/8/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 2/8/14.
  */
 @RunWith(JukitoRunner.class)
 public class PrimeTest {

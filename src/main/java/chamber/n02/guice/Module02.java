@@ -26,13 +26,17 @@ package chamber.n02.guice;
 import chamber.n02.factorial.Factorial;
 import chamber.n02.factorial.FactorialIterative;
 import com.google.inject.AbstractModule;
+import common.io.console.guice.TerminalModule;
 
 /**
- * Created by Gerardo on 2/3/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 2/3/14.
  */
 public class Module02 extends AbstractModule {
 	@Override
 	protected void configure() {
 		bind(Factorial.class).to(FactorialIterative.class);
+        install(new TerminalModule());
 	}
 }

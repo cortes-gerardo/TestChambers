@@ -25,6 +25,7 @@ package chamber.n03.labrat;
 
 import chamber.n03.guice.Module03;
 import com.google.inject.Inject;
+import org.jukito.All;
 import org.jukito.JukitoModule;
 import org.jukito.JukitoRunner;
 import org.junit.Before;
@@ -51,9 +52,9 @@ public class LabRatFactoryTest
 	}
 
 	@Test
-	public void create()
+	public void create(@All("name") String name)
 	{
-		final LabRat rat = factory.create("Chester");
+		final LabRat rat = factory.create(name);
 		System.out.println(rat.toString());
 		assertNotNull(rat);
 	}
@@ -64,6 +65,11 @@ public class LabRatFactoryTest
 		protected void configureTest()
 		{
 			install(new Module03());
+            bindManyNamedInstances(String.class, "name", getNames());
 		}
-	}
+
+        private String[] getNames() {
+            return new String[]{"Cless Alvein", "Mint Adnade", "Chester Barklight", "Klarth F. Lester", "Arche Klein", "Fujibayashi Suzu"};
+        }
+    }
 }

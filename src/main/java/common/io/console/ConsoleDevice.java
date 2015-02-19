@@ -28,7 +28,9 @@ import java.io.PrintWriter;
 import java.io.Reader;
 
 /**
- * Created by Gerardo on 2/10/14.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 2/10/14.
  */
 public class ConsoleDevice implements Terminal {
 	private final Console console;

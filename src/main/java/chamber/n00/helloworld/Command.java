@@ -24,7 +24,9 @@
 package chamber.n00.helloworld;
 
 /**
- * Created by Gerardo on 12/2/13.
+ * @author Gerardo Cortés <gerardo.cortes.o@gmail.com>
+ * @version 1.0
+ * @since 12/2/13.
  */
 public interface Command {
     void execute();
